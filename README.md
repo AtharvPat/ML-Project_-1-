@@ -58,7 +58,7 @@ Here are the results from the model after training:
 ### Visualization of Results
 The following plot illustrates the comparison between actual and predicted values:
 
-![Actual vs Predicted Values Comparison](image.png)
+![Actual vs Predicted Values Comparison](https://github.com/AtharvPat/ML-Project_-1-/blob/main/Results/output.png)
 
 
 
