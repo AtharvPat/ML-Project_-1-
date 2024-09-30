@@ -4,7 +4,7 @@
 The following members worked on this project:
 
 - Atharv Patil (A20580674)
-- Emile Mondon (A########)
+- Emile Mondon (A20600364)
 - Tejaswini Viswanath (A20536544)
 - Merlin Santano Simoes (A20531255)
 ## Q1a. What does the Model do 
