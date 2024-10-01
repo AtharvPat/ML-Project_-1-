@@ -32,7 +32,7 @@ The following parameters are exposed for tuning model performance:
 - `iterations`: The number of iterations for the gradient descent algorithm. Increasing this value may lead to better convergence but requires more computation time.
 
 ## Q4 Limitations and Future Work
-The currently our Model may struggle with the following specific inputs:
+Currently our Model may struggle with the following specific inputs:
 
 - **Non-linear Data**: The model is inherently linear, which means it may not perform well on datasets that exhibit non-linear relationships. Given More time we could explore implementing polynomial features address this limitation.
 - **Outliers**: The model's might not work well if significant outliers are present in the dataset, which can skew the loss calculation. Given more time more effective regression techniques could be exprimented to address this limitation.
