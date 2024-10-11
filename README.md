@@ -184,5 +184,5 @@ Here are the results from the model after training:
 ### Visualization of Results
 The following plot illustrates the comparison between actual and predicted values compared with SkLearn Model:
 
-![Actual vs Predicted Values Comparison](https://github.com/AtharvPat/ML-Project_-1-/blob/main/Results/output.png)
+![Actual vs Predicted Values Comparison]([https://github.com/AtharvPat/ML-Project_-1-/blob/main/Results/output.png](https://github.com/AtharvPat/ML-Project_-1-/blob/main/PROJECT/Notebooks/Visilizuations/genData%20visulaization.png))
 
