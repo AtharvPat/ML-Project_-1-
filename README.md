@@ -7,6 +7,120 @@ The following members worked on this project:
 - Emile Mondon (A20600364)
 - Tejaswini Viswanath (A20536544)
 - Merlin Santano Simoes (A20531255)
+
+## Table of Contents
+- [Requirements](#requirements)
+- [File Structure](#file-structure)
+- [Setup](#setup)
+- [How to Run Model](# How to Run Model_test.py)
+- [Running Tests](#running-test)
+
+---
+
+### Requirements
+
+- Python 3.7+
+- Required Libraries: `numpy`, `pandas`, `pytest`
+
+### File Structure
+
+- `Models/ElasticNet.py`: Contains the `ElasticNetModel` class to perform ElasticNet regression.
+- `Models/Data_Gen.py`: Contains `DataGenerator` and `ProfessorData` classes to generate datasets.
+- `Model_test.py`: Main script to train the ElasticNet model and evaluate performance metrics.
+- `PyTest.py`: Script to run tests for model and data functions using PyTest.
+
+---
+
+### Setup
+
+Clone the repository and ensure the required libraries are installed:
+```bash
+git clone https://github.com/your-repo-name/elastic-net-model
+cd elastic-net-model
+pip install -r requirements.txt
+``` 
+
+### How to Run Model_test.py
+
+`Model_test.py` accepts several arguments that allow you to configure data generation, Elastic Net parameters, and CSV file inputs. Below are instructions and examples for using each argument.
+
+## Argument Options
+
+### Generated Data Arguments:
+
+- `--rows`: Number of rows/samples in the generated data.
+- `--cols`: Number of columns/features in the generated data.
+- `--noise`: Noise level in the generated data.
+- `--seed`: Random seed for reproducibility.
+
+### Example Command:
+
+```bash
+python Model_test.py --rows 100 --cols 10 --noise 0.1 --seed 42
+```
+
+### Professor Data Generation Arguments:
+
+- `-N`: Number of samples.
+- `-m`: Regression coefficients.
+- `-b`: Offset (intercept).
+- `-scale`: Scale of noise.
+- `-rnge`: Range of values for features.
+- `-random_seed`: Seed for reproducibility.
+
+### Example Command:
+
+```bash
+python Model_test.py -N 100 -m 1.0 2.0 -b 0.5 -scale 0.1 -rnge 0.0 10.0 -random_seed 42
+```
+
+### CSV File Input Arguments:
+
+- `--csv_file_path`: Path to the CSV file containing your dataset.
+- `--target_column`: Name of the target column in the CSV file.
+
+### Example Command:
+
+```bash
+python Model_test.py --csv_file_path "data/sample.csv" --target_column "Price"
+```
+### Elastic Net Model Arguments:
+
+- `--alpha`: Regularization strength.
+- `--penalty_ratio`: Ratio between L1 and L2 penalties.
+- `--learning_rate`: Learning rate.
+- `--iterations`: Number of iterations.
+
+### Example Command:
+
+```bash
+python Model_test.py --alpha 0.01 --penalty_ratio 0.1 --learning_rate 0.001 --iterations 10000
+```
+
+### Test Set:
+- `--test_size`: Fraction of data to be used for testing.
+
+### Example Commands
+
+#### Generate Data and Train Model:
+
+```bash
+python Model_test.py --rows 100 --cols 5 --noise 0.2 --alpha 0.01 --penalty_ratio 0.5 --learning_rate 0.001 --iterations 5000 --test_size 0.2
+```
+### Train Model on Data Generated from Professor Code
+
+```bash
+python Model_test.py -N 100 -m 1.0 2.0 -b 0.5 -scale 0.1 -rnge 0.0 10.0 -random_seed 42 --alpha 0.01 --penalty_ratio 0.5 --learning_rate 0.001 --iterations 5000 --test_size 0.2
+```
+
+#### Train Model on CSV Data:
+```bash
+python Model_test.py --csv_file_path "data/sample.csv" --target_column "Price"
+```
+
+
+
+
 ## Q1a. What does the Model do 
 The ElasticNet Linear Regression model implemented in the above ipynb file is a combination of L1 (Lasso) and L2 (Ridge) regularization. The Model is implemented to address colinear Data and Overfitting problems of linear regression. The model is highly useful if the dataset has high dimensionaliity where features may be corelated. It can improve prediction accuracy by balancing btoh L1 and L2 Penalties.
 
