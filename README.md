@@ -53,7 +53,7 @@ sys.path.insert(0, '-- path of Root Directory -- ')
 ### Example Command:
 
 ```bash
-python Model_test.py --rows 100 --cols 10 --noise 0.1 --seed 42
+python Test_Model.py --rows 100 --cols 10 --noise 0.1 --seed 42
 ```
 
 ### Professor Data Generation Arguments:
@@ -68,7 +68,7 @@ python Model_test.py --rows 100 --cols 10 --noise 0.1 --seed 42
 ### Example Command:
 
 ```bash
-python Model_test.py -N 100 -m 1.0 2.0 -b 0.5 -scale 0.1 -rnge 0.0 10.0 -random_seed 42
+python Test_Model.py -N 100 -m 1.0 2.0 -b 0.5 -scale 0.1 -rnge 0.0 10.0 -random_seed 42
 ```
 
 ### CSV File Input Arguments:
@@ -79,7 +79,7 @@ python Model_test.py -N 100 -m 1.0 2.0 -b 0.5 -scale 0.1 -rnge 0.0 10.0 -random_
 ### Example Command:
 
 ```bash
-python Model_test.py --csv_file_path "data/sample.csv" --target_column "Price"
+python Test_Model.py --csv_file_path "data/sample.csv" --target_column "Price"
 ```
 ### Elastic Net Model Arguments:
 
@@ -91,7 +91,7 @@ python Model_test.py --csv_file_path "data/sample.csv" --target_column "Price"
 ### Example Command:
 
 ```bash
-python Model_test.py --alpha 0.01 --penalty_ratio 0.1 --learning_rate 0.001 --iterations 10000
+python Test_Model.py --alpha 0.01 --penalty_ratio 0.1 --learning_rate 0.001 --iterations 10000
 ```
 
 ### Test Set:
