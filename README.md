@@ -8,14 +8,6 @@ The following members worked on this project:
 - Tejaswini Viswanath (A20536544)
 - Merlin Santano Simoes (A20531255)
 
-## Table of Contents
-- [Requirements](#requirements)
-- [File Structure](#file-structure)
-- [Setup](#setup)
-- [How to Run Model](# How to Run Model_test.py)
-- [Running Tests](#running-test)
-
----
 
 ### Requirements
 
@@ -26,7 +18,7 @@ The following members worked on this project:
 
 - `Models/ElasticNet.py`: Contains the `ElasticNetModel` class to perform ElasticNet regression.
 - `Models/Data_Gen.py`: Contains `DataGenerator` and `ProfessorData` classes to generate datasets.
-- `Model_test.py`: Main script to train the ElasticNet model and evaluate performance metrics.
+- `Test_Model.py`: Main script to train the ElasticNet model and evaluate performance metrics.
 - `PyTest.py`: Script to run tests for model and data functions using PyTest.
 
 ---
@@ -36,13 +28,17 @@ The following members worked on this project:
 Clone the repository and ensure the required libraries are installed:
 ```bash
 git clone https://github.com/your-repo-name/elastic-net-model
-cd elastic-net-model
 pip install -r requirements.txt
-``` 
+```
+Also, make sure to change the path in `Test_Model.py` and `PyTest.py`  as needed:
 
+```bash
+import sys
+sys.path.insert(0, '-- path of Root Directory -- ')
+```
 ### How to Run Model_test.py
 
-`Model_test.py` accepts several arguments that allow you to configure data generation, Elastic Net parameters, and CSV file inputs. Below are instructions and examples for using each argument.
+`Test_Model.py` accepts several arguments that allow you to configure data generation, Elastic Net parameters, and CSV file inputs. Below are instructions and examples for using each argument.
 
 ## Argument Options
 
@@ -102,21 +98,30 @@ python Model_test.py --alpha 0.01 --penalty_ratio 0.1 --learning_rate 0.001 --it
 
 ### Example Commands
 
-#### Generate Data and Train Model:
+### Generate Data and Train Model:
 
 ```bash
-python Model_test.py --rows 100 --cols 5 --noise 0.2 --alpha 0.01 --penalty_ratio 0.5 --learning_rate 0.001 --iterations 5000 --test_size 0.2
+python Test_Model.py --rows 100 --cols 5 --noise 0.2 --alpha 0.01 --penalty_ratio 0.5 --learning_rate 0.001 --iterations 5000 --test_size 0.2
 ```
 ### Train Model on Data Generated from Professor Code
 
 ```bash
-python Model_test.py -N 100 -m 1.0 2.0 -b 0.5 -scale 0.1 -rnge 0.0 10.0 -random_seed 42 --alpha 0.01 --penalty_ratio 0.5 --learning_rate 0.001 --iterations 5000 --test_size 0.2
+python Test_Model.py -N 100 -m 1.0 2.0 -b 0.5 -scale 0.1 -rnge 0.0 10.0 -random_seed 42 --alpha 0.01 --penalty_ratio 0.5 --learning_rate 0.001 --iterations 5000 --test_size 0.2
 ```
 
-#### Train Model on CSV Data:
+### Train Model on CSV Data:
 ```bash
-python Model_test.py --csv_file_path "data/sample.csv" --target_column "Price"
+python Test_Model.py --csv_file_path "data/sample.csv" --target_column "Price"
 ```
+### Running Tests
+
+To verify the functionality, you can run the test script `PyTest.py`, which includes unit tests for functions in the model pipeline. Make sure you are in the Test Directory before running the below command.
+
+```bash
+pytest PyTest.py
+```
+
+
 
 
 
