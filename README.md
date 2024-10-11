@@ -182,40 +182,7 @@ Here are the results from the model after training:
     ```
 
 ### Visualization of Results
-The following plot illustrates the comparison between actual and predicted values:
+The following plot illustrates the comparison between actual and predicted values compared with SkLearn Model:
 
 ![Actual vs Predicted Values Comparison](https://github.com/AtharvPat/ML-Project_-1-/blob/main/Results/output.png)
 
-
-
-## Usage
-To use the ElasticNet regression model, follow these steps:
-
-1. **Generate or Load Data**: You can use the `generate_data` method to create synthetic collinear data or load your own dataset.
-2. **Split Data**: Use the `train_test_split` method to divide your dataset into training and testing sets.
-3. **Standardize Data**: The `standardize_data` method standardizes the feature sets for better performance during training.
-4. **Fit the Model**: Call the `fit` method with the training data to train the model.
-5. **Make Predictions**: Use the `predict` method to generate predictions on the test set.
-6. **Evaluate the Model**: Calculate metrics such as Mean Squared Error (MSE) to assess the model's performance.
-
-### Example
-```python
-X, y = Gen_data(1000, 10)
-
-
-X_train, X_test, y_train, y_test = train_test_split(X,y, test_size=0.2)
-
-
-X_train_std, X_test_std = standardize(X_train, X_test)
-
-
-model = ElasticNet(alpha = 0.01,
-                   l_ratio = 0.2,
-                   learning_rate =0.0005,
-                   iterations= 10000)
-
-
-model.fit(X_train_std.values, y_train.values)
-
-
-y_pred =  model.predict(X_test_std.values)
