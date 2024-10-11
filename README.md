@@ -12,7 +12,7 @@ The following members worked on this project:
 ### Requirements
 
 - Python 3.7+
-- Required Libraries: `numpy`, `pandas`, `pytest`, 'sys', 'argparse'
+- Required Libraries: `numpy`, `pandas`, `pytest`, sys , argparse
 
 ### File Structure
 
